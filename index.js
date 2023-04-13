@@ -1,4 +1,4 @@
-// lichess api lip_pBoRjdi8Lw56uR8ifio2
+// lichess api 
 
 var board,
   game = new Chess();
@@ -478,9 +478,9 @@ let isCharNumber = (c) => {
 
 class CrudManager {
   // crudcrud url
-  static url = "https://63f678039daf59d1ad898b5c.mockapi.io/fens";
+  static url = "https://.mockapi.io/fens";
 
-  // https://63f678039daf59d1ad898b5c.mockapi.io/fens
+ 
   // creates name to fens
 
   static createFen(name, fen) {
