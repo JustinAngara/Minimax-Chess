@@ -1,0 +1,140 @@
+.board {
+    width: 400px;
+    margin: auto;
+  }
+  
+  .info {
+    width: 400px;
+    margin: auto;
+  }
+  
+  .move-history {
+    max-height: 100px;
+    overflow-y: scroll;
+  }
+  
+  /*!
+   * chessboard.js $version$
+   *
+   * Copyright 2013 Chris Oakman
+   * Released under the MIT license
+   * https://github.com/oakmac/chessboardjs/blob/master/LICENSE
+   *
+   * Date: $date$
+   */
+  
+  /* clearfix */
+  .clearfix-7da63 {
+    clear: both;
+  }
+  
+  /* board */
+  .board-b72b1 {
+    border: 2px solid #404040;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  
+  /* square */
+  .square-55d63 {
+    float: left;
+    position: relative;
+  
+    /* disable any native browser highlighting */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* white square */
+  .white-1e1d7 {
+    background-color: #f0d9b5;
+    color: #b58863;
+  }
+  
+  /* black square */
+  .black-3c85d {
+    background-color: #b58863;
+    color: #f0d9b5;
+  }
+  
+  /* highlighted square */
+  .highlight1-32417,
+  .highlight2-9c5d2 {
+    -webkit-box-shadow: inset 0 0 3px 3px red;
+    -moz-box-shadow: inset 0 0 3px 3px red;
+    box-shadow: inset 0 0 3px 3px red;
+  }
+  
+  /* notation */
+  .notation-322f9 {
+    cursor: default;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    position: absolute;
+  }
+  
+  .alpha-d2270 {
+    bottom: 1px;
+    right: 3px;
+  }
+  
+  .numeric-fc462 {
+    top: 2px;
+    left: 2px;
+  }
+  
+  
+  .div-float {
+    float: right;
+  }
+  
+  .display-fen {
+    padding-top: 40px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .restartBtn {
+    font-size: 40px;
+  }
+  
+  #table-body {
+    display: none;
+  }
+  
+  .background-image {
+    background-image: url('data:image/jpeg;base64,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');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .color-scheme {
+    width: auto;
+    height: auto;
+    overflow: auto;
+    color: rgb(96, 96, 96);
+  }
+  
+  .small-board {
+    width: 50%;
+  }
+  
+  .header-text {
+    background-color: rgb(214, 216, 217);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .cool-text {
+    background-color: rgb(214, 216, 217);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  

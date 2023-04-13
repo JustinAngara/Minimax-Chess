@@ -1,0 +1,23 @@
+{
+  "name": "minimax-chess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinAngara/Minimax-Chess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinAngara/Minimax-Chess/issues"
+  },
+  "homepage": "https://github.com/JustinAngara/Minimax-Chess#readme",
+  "dependencies": {
+    "@chrisoakman/chessboardjs": "^1.0.0",
+    "bootstrap": "^4.4.1"
+  }
+}
