@@ -18,6 +18,8 @@
   "homepage": "https://github.com/JustinAngara/Minimax-Chess#readme",
   "dependencies": {
     "@chrisoakman/chessboardjs": "^1.0.0",
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^4.4.1",
+    "jquery-particles": "^2.9.3",
+    "particlesjs": "^2.2.3"
   }
 }

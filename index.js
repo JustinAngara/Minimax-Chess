@@ -1,4 +1,4 @@
-// lichess api 
+// lichess api lip_pBoRjdi8Lw56uR8ifio2
 
 var board,
   game = new Chess();
@@ -212,7 +212,7 @@ let onDragStart = function(source, piece, position, orientation) {
   }
 };
 
-let makeBestMove = function() {
+let makeBestMove = async function() {
   // this is where computer makes move
   /* runComputerMove(); */
 
@@ -236,7 +236,7 @@ let makeBestMove = function() {
 
 };
 
-let runComputerMove = () => {
+let runComputerMove = async () => {
   let bestMove = getBestMove(game);
   console.log('', bestMove);
   game.ugly_move(bestMove);
@@ -478,9 +478,9 @@ let isCharNumber = (c) => {
 
 class CrudManager {
   // crudcrud url
-  static url = "https://.mockapi.io/fens";
+  static url = "https://63f678039daf59d1ad898b5c.mockapi.io/fens";
 
- 
+  // https://63f678039daf59d1ad898b5c.mockapi.io/fens
   // creates name to fens
 
   static createFen(name, fen) {
@@ -756,6 +756,15 @@ setupCfg(initialFen);
 // https://tablebase.lichess.ovh?fen=4k3/6KP/8/8/8/8/7p/8_w_-_-_0_1
 //
 let url = 'http://tablebase.lichess.ovh/standard/mainline?fen=4k3/6KP/8/8/8/8/7p/8_w_-_-_0_1';
-    fetch(url).then(response=>response.json()).then((data)=>{
-    	console.log(data);
+fetch(url).then(response=>response.json()).then((data)=>{
+    console.log(data);
+});
+
+
+window.onload = function() {
+    Particles.init({
+      selector: '.background',
+      color: ['#000000'],
+      connectParticles:true
     });
+  };
